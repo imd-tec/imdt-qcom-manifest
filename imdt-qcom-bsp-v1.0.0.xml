@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest name="IMDT-QCOM-DEVELOPMENT-BSP" version="0.0.0">
+<manifest name="IMDT-QCOM-BSP" version="1.0.0">
     <default sync-j="2"/>
     
     <remote name="imdt" fetch="https://github.com/imd-tec"/>
     <remote name="clo" fetch="https://git.codelinaro.org" review="codelinaro.org"/>
 
-    <project name="meta-imdt-qcom" path="poky/meta-imdt-qcom" remote="imdt" revision="kirkstone">
+    <project name="meta-imdt-qcom" path="poky/meta-imdt-qcom" remote="imdt" revision="db5e77c6ba2c1315ffbf9ac090e1be80ccef8e4e">
         <linkfile src="tools/imdt-setup-environment.sh" dest="imdt-setup-environment.sh"/>
         <linkfile src="tools/imdt-patch-qcs8550-build.sh" dest="imdt-patch-qcs8550-build.sh"/>
         <linkfile src="README.md" dest="README-IMDT.md"/>

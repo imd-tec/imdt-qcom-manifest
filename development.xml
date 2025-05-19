@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest>
+<manifest name="IMDT-QCOM-DEVELOPMENT-BSP" version="0.0.0">
     <default sync-j="2"/>
     
     <remote name="imdt" fetch="https://github.com/imd-tec"/>
-    
+    <remote name="clo" fetch="https://git.codelinaro.org" review="codelinaro.org"/>
+
     <project name="meta-imdt-qcom-dev" path="poky/meta-imdt-qcom" remote="imdt" revision="kirkstone">
         <linkfile src="tools/imdt-setup-environment.sh" dest="imdt-setup-environment.sh"/>
+        <linkfile src="tools/imdt-patch-qcs8550-build.sh" dest="imdt-patch-qcs8550-build.sh"/>
         <linkfile src="README.md" dest="README-IMDT.md"/>
     </project>
 
-    <project name="meta-imdt-qcom-internal" path="poky/meta-imdt-qcom-internal" remote="imdt" revision="kirkstone"/>
+    <remove-project name="clo/le/qc/components/pulseaudio.lnx/oe-recipes-oss"/>
+    <remove-project name="clo/le/meta-qti-qmmf"/>
+    <remove-project name="clo/le/platform/vendor/qcom-opensource/qmmf-sdk"/>
 
+    <project name="clo/le/platform/vendor/qcom-opensource/gst-plugins-qti-oss" path="src/vendor/qcom/opensource/gst-plugins-qti-oss" remote="clo" revision="44d1afdc84c69d540486944e8af1fd7dc42906c0" upstream="refs/heads/im-sdk.lnx.1.0.0.r1-rel"/>
+    <project name="clo/le/meta-qti-gst" path="poky/meta-qti-gst" remote="clo" revision="7110b605c0f20d85e7c3419e353c72868f78623e" upstream="refs/heads/im-sdk.lnx.1.0.0.r1-rel"/>
+
+    <project name="clo/le/platform/vendor/qcom-opensource/qmmf-sdk" path="src/vendor/qcom/opensource/qmmf-sdk" remote="clo" revision="1113f569baac5e87d0de56423695ef352caa44e8" upstream="refs/heads/iot-concam.lnx.2.0.r18-rel"/>
+    <project name="clo/le/meta-qti-qmmf" path="poky/meta-qti-qmmf" remote="clo" revision="98c6d8feed1a8d153c3363a67b0f502a13e93a00" upstream="refs/heads/meta-qti-qmmf-recipes.lnx.2.1.r1-rel"/>
+    <project name="clo/le/qc/components/pulseaudio.lnx/oe-recipes-oss" path="poky/meta-qti-qmmf/recipes/pulseaudio" remote="clo" revision="dea74456c344f398b6e612cf2936452db8027e4d" upstream="refs/heads/pulseaudio.lnx.3.0.r1-rel"/>
 </manifest>
-
