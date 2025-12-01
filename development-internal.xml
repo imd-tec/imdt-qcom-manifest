@@ -4,6 +4,9 @@
     
     <remote name="imdt" fetch="https://github.com/imd-tec"/>
     <remote name="clo" fetch="https://git.codelinaro.org" review="codelinaro.org"/>
+    <remote name="sbabic" fetch="https://github.com/sbabic"/>
+
+    <project name="meta-swupdate" path="poky/meta-swupdate" remote="sbabic" revision="f115c13978a2263fc5d89a2e3cc8bc79ce66f9a2"/>
     
     <project name="meta-imdt-qcom-dev" path="poky/meta-imdt-qcom" remote="imdt" revision="kirkstone">
         <linkfile src="tools/imdt-setup-environment.sh" dest="imdt-setup-environment.sh"/>
