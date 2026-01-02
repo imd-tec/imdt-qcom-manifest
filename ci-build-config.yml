@@ -38,3 +38,7 @@ development:
 imdt-qcom-bsp-v1.1.0:
   <<: *defaults
   version: "1.1.0"
+
+imdt-qcom-bsp-v1.2.0:
+  <<: *defaults
+  version: "1.2.0"
