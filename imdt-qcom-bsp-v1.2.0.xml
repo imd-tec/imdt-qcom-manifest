@@ -6,7 +6,7 @@
     <remote name="clo" fetch="https://git.codelinaro.org" review="codelinaro.org"/>
     <remote name="sbabic" fetch="https://github.com/sbabic"/>
 
-    <project name="meta-imdt-qcom" path="poky/meta-imdt-qcom" remote="imdt" revision="5689cdf7fc3e0a617e86e4d4e6987fbde0f58696">
+    <project name="meta-imdt-qcom" path="poky/meta-imdt-qcom" remote="imdt" revision="69cc08ec14ea133b415b0e6daf4ea7408cd80992">
         <linkfile src="tools/imdt-setup-environment.sh" dest="imdt-setup-environment.sh"/>
         <linkfile src="tools/imdt-patch-qcs8550-build.sh" dest="imdt-patch-qcs8550-build.sh"/>
         <linkfile src="README.md" dest="README-IMDT.md"/>
