@@ -21,6 +21,9 @@ defaults: &defaults
   release_name: "imdt_qcs8550_sbc_prebuilt_release"
   imdt_patch_script_path: "LE.PRODUCT.2.1.r1/apps_proc/imdt-patch-qcs8550-build.sh"
 
+  # Flag to build SWU image
+  build_swu: false
+
   # Docker image to use as the base for the build environment
   base_docker_image: "imdtec/imdt-qualcomm-build-setup:0.5.1"
     
@@ -31,6 +34,7 @@ development:
   <<: *defaults
   version: "development"
   skip_steps: ["build_sdk"]
+  build_swu: true
 
 imdt-qcom-bsp-v1.1.0:
   <<: *defaults
