@@ -34,7 +34,6 @@ development:
   <<: *defaults
   version: "development"
   skip_steps: ["build_sdk"]
-  build_swu: true
 
 imdt-qcom-bsp-v1.1.0:
   <<: *defaults
