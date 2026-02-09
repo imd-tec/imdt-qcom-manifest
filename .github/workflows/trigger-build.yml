@@ -63,7 +63,7 @@ jobs:
     - uses: actions/checkout@v6
       with:
           repository: imd-tec/qualcomm-ci
-          ref: stable
+          ref: 497cb24208275ce56fd9cf7d19690cdd06c4d9b6
           token: ${{ secrets.QCI_DEPLOY_PAT }}
           persist-credentials: false
           path: qualcomm_ci
@@ -126,7 +126,7 @@ jobs:
       fail-fast: false
       matrix: 
         include: ${{ fromJson(needs.get_changed_manifests.outputs.manifest_list) }}
-    uses: imd-tec/qualcomm-ci/.github/workflows/imdt-build-qcom-bsp.yml@stable
+    uses: imd-tec/qualcomm-ci/.github/workflows/imdt-build-qcom-bsp.yml@497cb24208275ce56fd9cf7d19690cdd06c4d9b6
     secrets: inherit
     with:
       #Source Context
@@ -148,7 +148,7 @@ jobs:
       BUILD_RELEASE_NAME:       ${{ matrix.release_name }}
       IMDT_PATCH_SCRIPT_PATH:   ${{ matrix.imdt_patch_script_path }}
       
-      # Flag to create SWUpdate image
+      #Flag to create SWUpdate image
       BUILD_SWU:                ${{ matrix.build_swu || false }}
 
       #Sources
