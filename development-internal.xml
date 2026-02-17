@@ -15,6 +15,7 @@
     </project>
 
     <project name="meta-imdt-qcom-internal" path="poky/meta-imdt-qcom-internal" remote="imdt" revision="project/imdt-sbc8550"/>
+    <project name="meta-deepx-m1" path="poky/meta-deepx-m1" remote="imdt" revision="kirkstone-qcom"/>
 
     <remove-project name="clo/le/qc/components/pulseaudio.lnx/oe-recipes-oss"/>
     <remove-project name="clo/le/meta-qti-qmmf"/>
