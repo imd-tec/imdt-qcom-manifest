@@ -4,7 +4,7 @@
 # This file determines the build parameters for each manifest version for build automation.
 #
 # KEY CONSIDERATIONS BEFORE EDITING:
-# 1. The Key Name (e.g., 'imdt-qcom-bsp-v1.0.0') MUST match the manifest filename 
+# 1. The Key Name (e.g., 'imdt-qcom-bsp-v1.0.0') MUST match the manifest filename
 #    (e.g., 'imdt-qcom-bsp-v1.0.0.xml') exactly, excluding extension.
 # 2. The versions extend from the 'defaults' key via the YAML anchor '<<: *defaults'.
 #    Parameters can be overridden as needed per version.
@@ -26,8 +26,8 @@ defaults: &defaults
 
   # Docker image to use as the base for the build environment
   base_docker_image: "imdtec/imdt-qualcomm-build-setup:0.5.1"
-    
-  # List build steps to skip (see qualcomm-ci/.github/workflows/imdt-build-qcom-bsp.yml for further details)  
+
+  # List build steps to skip (see qualcomm-ci/.github/workflows/imdt-build-qcom-bsp.yml for further details)
   skip_steps: []
 
 development:
@@ -46,3 +46,8 @@ imdt-qcom-bsp-v1.2.0:
 imdt-qcom-bsp-v2.0.0:
   <<: *defaults
   version: "2.0.0"
+
+imdt-qcom-bsp-v2.1.0:
+  <<: *defaults
+  version: "2.1.0"
+  build_swu: true
